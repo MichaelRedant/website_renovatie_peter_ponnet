@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Renovatie Peter Ponnet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="dot"></span>
+          <span>Renovatie Peter Ponnet</span>
+        </div>
+        <button class="nav-toggle" aria-label="Menu openen">Menu</button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="diensten.html">Diensten</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <span class="pill">0493 06 35 39</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal" data-animate>
+            <div class="eyebrow">Contact & afspraken</div>
+            <h1>Bel of mail Peter voor een voorstel op maat.</h1>
+            <p>Stuur gerust enkele foto's of een schets mee. Peter reageert binnen 48 uur met een plan van aanpak.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="tel:+32493063539">Bel 0493 06 35 39</a>
+              <a class="btn btn-ghost" href="#contact-form">Contactformulier</a>
+            </div>
+          </div>
+          <div class="hero-card reveal reveal-slow" data-animate>
+            <div class="stat">
+              <div>
+                <strong>Erpe-Mere</strong>
+                <div>Dikkelindestraat 12</div>
+              </div>
+              <span class="pill">Regio Herzele en omliggend</span>
+            </div>
+            <ul class="list" style="margin-top: 16px">
+              <li>Afspraak mogelijk op weekdagen en zaterdagvoormiddag.</li>
+              <li>Telefonisch overleg voor dringende herstellingen.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-card reveal" data-animate>
+              <h3>Bel of stuur een bericht</h3>
+              <p>Direct bereikbaar voor snelle vragen, dringende interventies of een eerste prijsindicatie.</p>
+              <a class="pill" href="tel:+32493063539">0493 06 35 39</a>
+            </div>
+            <div class="contact-card reveal" data-animate>
+              <h3>Mail met foto's of plannen</h3>
+              <p>Hoe meer info, hoe sneller uw voorstel. Voeg gerust foto's of afmetingen toe.</p>
+              <a class="pill" href="mailto:ponnetpeter@msn.com">ponnetpeter@msn.com</a>
+            </div>
+            <div class="contact-card reveal" data-animate>
+              <h3>Adres</h3>
+              <p>Dikkelindestraat 12, 9420 Erpe-Mere</p>
+              <p>Peter vertrekt vanuit Erpe-Mere en is snel ter plaatse in Herzele, Zottegem en omgeving.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact-form">
+        <div class="container">
+          <div class="header-row reveal" data-animate>
+            <h2>Contactformulier</h2>
+            <span class="stamp">Reactie binnen 48 uur</span>
+          </div>
+          <div class="grid">
+            <div class="card reveal" data-animate>
+              <form method="POST" action="mail.php" novalidate>
+                <div style="display: grid; gap: 12px">
+                  <div class="hidden-field">
+                    <label>Laat leeg
+                      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                    </label>
+                  </div>
+                  <label>
+                    Naam
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      maxlength="100"
+                      placeholder="Uw naam"
+                      style="width: 100%; margin-top: 6px; padding: 12px; border-radius: 12px; border: 1px solid var(--stroke); background: rgba(255, 255, 255, 0.03); color: var(--sand)"
+                    />
+                  </label>
+                  <label>
+                    Telefoon of e-mail
+                    <input
+                      type="text"
+                      name="contact"
+                      required
+                      maxlength="120"
+                      placeholder="Telefoonnummer of e-mailadres"
+                      style="width: 100%; margin-top: 6px; padding: 12px; border-radius: 12px; border: 1px solid var(--stroke); background: rgba(255, 255, 255, 0.03); color: var(--sand)"
+                    />
+                  </label>
+                  <label>
+                    Uw vraag
+                    <textarea
+                      name="message"
+                      required
+                      maxlength="2000"
+                      rows="4"
+                      placeholder="Beschrijf kort de werken of voeg afmetingen toe."
+                      style="width: 100%; margin-top: 6px; padding: 12px; border-radius: 12px; border: 1px solid var(--stroke); background: rgba(255, 255, 255, 0.03); color: var(--sand); font-family: inherit"
+                    ></textarea>
+                  </label>
+                  <button class="btn btn-primary" type="submit">Stuur bericht</button>
+                  <div id="form-status" class="pill" style="display: none"></div>
+                </div>
+              </form>
+            </div>
+            <div class="card reveal" data-animate>
+              <h3>Bereikbaarheid</h3>
+              <p>
+                Peter werkt vooral in Herzele, Erpe-Mere, Zottegem en omliggende gemeenten. Bel voor dringende
+                herstellingen of stuur enkele foto's voor een snelle raming.
+              </p>
+              <div class="map" style="margin-top: 14px">
+                <iframe
+                  src="https://www.google.com/maps?q=Dikkelindestraat+12+9420+Erpe-Mere&output=embed"
+                  width="100%"
+                  height="260"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Kaart Dikkelindestraat 12, 9420 Erpe-Mere"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container meta">
+        <div>
+          Renovatie Peter Ponnet — Dikkelindestraat 12, 9420 Erpe-Mere · 0493 06 35 39 ·
+          <a href="mailto:ponnetpeter@msn.com">ponnetpeter@msn.com</a>
+        </div>
+        <div>
+          <a href="herzele.html">Herzele</a> · <a href="erpe-mere.html">Erpe-Mere</a> ·
+          <a href="zottegem.html">Zottegem</a> · <a href="oosterzele.html">Oosterzele</a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

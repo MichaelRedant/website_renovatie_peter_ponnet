@@ -1,0 +1,26 @@
+{
+  "name": "website_renovatie_peter_ponnet",
+  "version": "1.0.0",
+  "description": "Website voor Renovatie Peter Ponnet",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelRedant/website_renovatie_peter_ponnet.git"
+  },
+  "keywords": [],
+  "author": "Peter Ponnet",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MichaelRedant/website_renovatie_peter_ponnet/issues"
+  },
+  "homepage": "https://github.com/MichaelRedant/website_renovatie_peter_ponnet#readme",
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
