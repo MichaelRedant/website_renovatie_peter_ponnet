@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renovatie-peter-ponnet.be/sitemap.xml

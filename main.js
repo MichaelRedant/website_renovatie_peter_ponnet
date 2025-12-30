@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  window.dataLayer = window.dataLayer || [];
+
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle) {
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       statusBox.style.display = "inline-flex";
       statusBox.style.background = "rgba(34,197,94,0.15)";
       statusBox.style.borderColor = "rgba(34,197,94,0.4)";
+      window.dataLayer.push({ event: "form_submit", form: "contact", status: "ok" });
     } else if (status === "fail") {
       statusBox.textContent = "Versturen mislukt. Probeer opnieuw of bel 0493 06 35 39.";
       statusBox.style.display = "inline-flex";
@@ -46,4 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
       statusBox.style.borderColor = "rgba(239,68,68,0.4)";
     }
   }
+
+  // Track tel/mail clicks for optional analytics
+  const trackClicks = selector => {
+    document.querySelectorAll(selector).forEach(link => {
+      link.addEventListener("click", () => {
+        const href = link.getAttribute("href") || "";
+        const label = link.textContent.trim();
+        window.dataLayer.push({ event: "contact_click", type: selector.startsWith("a[href^='tel']") ? "tel" : "email", href, label });
+      });
+    });
+  };
+  trackClicks("a[href^='tel:']");
+  trackClicks("a[href^='mailto:']");
 });
