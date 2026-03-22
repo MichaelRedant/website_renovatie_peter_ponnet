@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Renovatie Peter Ponnet favicon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7e9d2" />
+      <stop offset="100%" stop-color="#ecd4ae" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#bg)" stroke="#b18a59" stroke-width="2.5" />
+  <path d="M16 31 32 18l16 13" fill="none" stroke="#7a5430" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M20 29v16h24V29" fill="none" stroke="#7a5430" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="29" y="36" width="6" height="9" rx="1.3" fill="#7a5430" />
+  <path d="M17 49 30 36" fill="none" stroke="#7a5430" stroke-width="3.2" stroke-linecap="round" />
+  <path d="M27 24 36 33 31 38 22 29z" fill="none" stroke="#7a5430" stroke-width="2.7" stroke-linejoin="round" />
+</svg>

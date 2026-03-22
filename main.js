@@ -6,12 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "light", label: "Licht minimal", meta: "Fris en rustig" },
     { id: "industrial", label: "Stoer industrieel", meta: "Robuust en modern" }
   ];
-  const defaultTheme = "warm";
+  const defaultTheme = "light";
+  const visibleThemeIds = new Set(["light"]);
   const themeStorageKey = "peter_ponnet_theme";
   const isValidTheme = theme => themes.some(item => item.id === theme);
+  const isVisibleTheme = theme => visibleThemeIds.has(theme);
+  const isSelectableTheme = theme => isValidTheme(theme) && isVisibleTheme(theme);
 
   const applyTheme = theme => {
-    const selected = isValidTheme(theme) ? theme : defaultTheme;
+    const selected = isSelectableTheme(theme) ? theme : defaultTheme;
     document.documentElement.setAttribute("data-theme", selected);
 
     try {
@@ -45,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${themes
           .map(
             theme => `
-          <button class="theme-option" type="button" data-theme-option="${theme.id}" aria-pressed="false">
+          <button class="theme-option" type="button" data-theme-option="${theme.id}" aria-pressed="false"${isVisibleTheme(theme.id) ? "" : ' hidden aria-hidden="true" tabindex="-1"'}>
             <span class="theme-swatch" aria-hidden="true"></span>
             <span>
               ${theme.label}
@@ -101,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let initialTheme = defaultTheme;
   try {
     const storedTheme = localStorage.getItem(themeStorageKey);
-    if (isValidTheme(storedTheme)) {
+    if (isSelectableTheme(storedTheme)) {
       initialTheme = storedTheme;
     }
   } catch (_error) {
